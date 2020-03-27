@@ -16,7 +16,6 @@ static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 0;   /* 0 means bottom bar */
 static const char *fonts[]               = { "Source Code Pro:size=12" };
 static const char dmenufont[]            = "Source Code Pro:size=12";
-static const char dmenuword[]            = "dmenu";
 static const char dmenuborderwidth[]     = "2";
 static const char dmenulist[]            = "15";
 static const char col_gray1[]            = "#222222";
@@ -77,7 +76,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char        dmenumon[2]   = "0";   /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-p", dmenuword, "-l", dmenulist, "-i", "-bw", dmenuborderwidth, NULL };
+static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-l", dmenulist, "-i", "-bw", dmenuborderwidth, NULL };
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
@@ -93,6 +92,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,          spawn,          {.v = dmenucmd }      },
 	{ MODKEY,                       XK_Return,     spawn,          {.v = termcmd }       },
 	{ MODKEY,                       XK_c,          spawn,          {.v = browsercmd }    },
+	{ MODKEY|ControlMask,           XK_i,          spawn,          {.v = upvol }         },
+	{ MODKEY|ControlMask,           XK_k,          spawn,          {.v = downvol }       },
+	{ MODKEY|ControlMask,           XK_m,          spawn,          {.v = mutevol }       },
 	{ MODKEY,                       XK_apostrophe, togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,          togglebar,      {0}                   },
 	{ MODKEY|ShiftMask,             XK_k,          rotatestack,    {.i = +1 }            },
