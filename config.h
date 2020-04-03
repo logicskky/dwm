@@ -145,7 +145,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,          6                                     )
 	TAGKEYS(                        XK_8,          7                                     )
 	TAGKEYS(                        XK_9,          8                                     )
-	{ MODKEY|ShiftMask|ControlMask, XK_c,          quit,           {0}                   },
+	{ MODKEY|ControlMask|ShiftMask, XK_c,          quit,           {0}                   },
 };
 
 /* button definitions */
@@ -153,7 +153,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument           */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0}                },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
 	{ ClkWinTitle,          0,              Button1,        togglewin,      {0}                },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0}                },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd }    },
