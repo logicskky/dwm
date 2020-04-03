@@ -3,6 +3,7 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 
 ## 安装前的准备
 在安装 dwm 之前，你需要有 `Xlib` 头文件。
+另外，你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。
 
 ## 安装
 首先，编辑 `config.mk` 这个文件来匹配你的本地设置（dwm 默认安装到 `/usr/local` 命名空间下）。  
