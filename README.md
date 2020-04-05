@@ -5,6 +5,7 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 - 你需要有 `Xlib` 头文件。  
 - 你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。  
 - 请把 dwm 的源代码中的文件路径和 `scripts` 文件夹中的脚本中的文件路径更改为你自己的电脑上的路径。  
+- 更改 `config.def.h` 或 `config.h` 中的字体设置以符合你的喜好
 
 ## 安装
 - 编辑 `config.mk` 这个文件来匹配你的本地设置（dwm 默认安装到 `/usr/local` 命名空间下）。  
@@ -44,7 +45,8 @@ exec dwm
 把 `others` 文件夹里的 `dwm.desktop` 复制到 `/usr/share/xsessions` 这个文件夹下，之后在登录管理器选择启动 dwm 即可。
 
 ## 配置
-Dwm 的配置是通过自定义 `config.h` 和重新编译安装来实现的。
+Dwm 的配置是通过自定义 `config.h` 和重新编译安装来实现的。  
+不过我推荐你自定义 `config.def.h` 这个文件，但要注意，编译安装之前要先删除 `config.h` 这个文件。  
 
 ## 补丁
 - [alphasystray.diff](https://github.com/theniceboy/dwm/blob/master/patches/alphasystray.diff) （[alpha](https://dwm.suckless.org/patches/alpha/) 和 [systray](https://dwm.suckless.org/patches/systray/) 补丁的集合，让状态栏能够半透明并且增加了系统托盘）

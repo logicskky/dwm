@@ -3,8 +3,8 @@
 # Network speed stuff stolen from http://linuxclues.blogspot.sg/2009/11/shell-script-show-network-speed.html
 
 print_mem(){
-	memfree=$(($(grep -m1 'MemAvailable:' /proc/meminfo | awk '{print $2}') / 1024))
-	echo -e "$memfree"
+	memfree=$(($(grep -m1 'MemAvailable:' /proc/meminfo | awk '{print $2}') / 1024))M
+	echo -e "💿 $memfree"
 }
 
 print_bat(){
@@ -34,7 +34,7 @@ show_record(){
 
 print_temp(){
 	test -f /sys/class/thermal/thermal_zone0/temp || return 0
-	echo $(head -c 2 /sys/class/thermal/thermal_zone0/temp)°C
+	echo CPU: $(head -c 2 /sys/class/thermal/thermal_zone0/temp)°C
 }
 
 print_date(){
@@ -93,7 +93,7 @@ export IDENTIFIER="unicode"
 #. "$DIR/dwmbar-functions/dwm_vpn.sh"
 #. "$DIR/dwmbar-functions/dwm_weather.sh"
 
-xsetroot -name " 💿 $(print_mem)M $(dwm_alsa) [ $(print_bat) ]$(show_record) CPU: $(print_temp) [$(print_date)] "
+xsetroot -name " $(print_mem) | $(dwm_alsa) | $(print_bat) | $(show_record) | $(print_temp) [$(print_date)]"
 
 exit 0
 
