@@ -6,7 +6,6 @@ picom &
 /bin/bash ~/Program/dwm/scripts/inverse-scroll.sh &
 variety &
 sleep 1
-# lxappearance &
 nm-applet &
 flameshot &
 sleep 1
