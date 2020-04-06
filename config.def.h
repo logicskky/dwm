@@ -18,6 +18,7 @@ static const char *fonts[]               = { "Source Code Pro:size=12" };
 static const char dmenufont[]            = "Source Code Pro:size=12";
 static const char dmenuborderwidth[]     = "2";
 static const char dmenulist[]            = "15";
+static const char dmenucolor[]           = "#2D4D7D";
 static const char col_gray1[]            = "#222222";
 static const char col_gray2[]            = "#444444";
 static const char col_gray3[]            = "#bbbbbb";
@@ -76,7 +77,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char        dmenumon[2]   = "0";   /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-l", dmenulist, "-i", "-bw", dmenuborderwidth, NULL };
+static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", dmenucolor, "-sf", col_gray4, "-l", dmenulist, "-i", "-bw", dmenuborderwidth, NULL };
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
