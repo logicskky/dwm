@@ -81,9 +81,9 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
-static const char *upvol[]   = { "/home/frank/Program/dwm/scripts/vol-up.sh",      NULL };
-static const char *downvol[] = { "/home/frank/Program/dwm/scripts/vol-down.sh",    NULL };
-static const char *mutevol[] = { "/home/frank/Program/dwm/scripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "~/Program/dwm/scripts/vol-up.sh",      NULL };
+static const char *downvol[] = { "~/Program/dwm/scripts/vol-down.sh",    NULL };
+static const char *mutevol[] = { "~/Program/dwm/scripts/vol-toggle.sh",  NULL };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "60x20", NULL };
