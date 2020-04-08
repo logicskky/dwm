@@ -38,6 +38,7 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 - 你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。  
 - 更改 `config.def.h` 或 `config.h` 中的字体设置以符合你的喜好。  
 - 更改 `scripts` 文件夹中的 `autostart.sh` 脚本（即开机启动项），以符合你的要求。  
+- 更改所有文件中的路径以符合你的电脑上的路径。  
 - 我的 dwm 需要我的 [st](https://github.com/LogicSkky/my-st) 和 [dmenu](https://github.com/LogicSkky/my-dmenu)，以及 feh、amixer、flameshot 和 google-chrome。  
 ## 安装
 
