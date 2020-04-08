@@ -34,11 +34,11 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 ## 安装前的准备
 
 - 你需要有 `Xlib` 头文件。  
+- 你最好拥有 `picom` 或其他窗口渲染器，并在 `scripts` 文件夹中的 `autostart.sh` 脚本中启动它。  
 - 你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。  
 - 更改 `config.def.h` 或 `config.h` 中的字体设置以符合你的喜好。  
 - 更改 `scripts` 文件夹中的 `autostart.sh` 脚本（即开机启动项），以符合你的要求。  
-- 我的 dwm 需要我的 [st](https://github.com/LogicSkky/my-st) 和 [dmenu](https://github.com/LogicSkky/my-dmenu) 这两个软件，你可以安装我的，也可以自己配置，或者改用其他程序，甚至可以不使用，但后三种选择都要更改 `config.def.h` 或 `config.h` 这两个文件。
-
+- 我的 dwm 需要我的 [st](https://github.com/LogicSkky/my-st) 和 [dmenu](https://github.com/LogicSkky/my-dmenu)，以及 feh、amixer、flameshot 和 google-chrome。  
 ## 安装
 
 - 克隆这个仓库：
@@ -219,11 +219,11 @@ xsetroot -name "Hello"
 
 #### 1.5 关于声音的控制
 
-| 快捷键       | 作用          |
-|--------------|---------------|
-| `Mod+Ctrl+i` | 把声音升高 5% |
-| `Mod+Ctrl+k` | 把声音降低 5% |
-| `Mod+Ctrl+m` | 打开/关闭声音 |
+| 快捷键        | 作用          |
+|---------------|---------------|
+| `Mod+Shift+w` | 把声音升高 5% |
+| `Mod+Shift+s` | 把声音降低 5% |
+| `Mod+Shift+e` | 打开/关闭声音 |
 
 #### 1.6 关于窗口之间的缝隙
 
@@ -249,20 +249,22 @@ xsetroot -name "Hello"
 
 #### 1.7 其他功能
 
-| 快捷键             | 作用                              |
-|--------------------|-----------------------------------|
-| `Mod+'`            | 打开/关闭 `scratchpad`            |
-| `Mod+b`            | 打开/关闭状态栏                   |
-| `Mod+Ctrl+q`       | 关闭当前窗口                      |
-| `Mod+Ctrl+Shift+c` | 关闭 `dwm`                        |
-| `Mod+,`            | 暂不了解该快捷键的功能            |
-| `Mod+.`            | 暂不了解该快捷键的功能            |
-| `Mod+Shift+,`      | 暂不了解该快捷键的功能            |
-| `Mod+Shift+.`      | 暂不了解该快捷键的功能            |
+| 快捷键             | 作用                      |
+|--------------------|---------------------------|
+| `Mod+'`            | 打开/关闭 `scratchpad`    |
+| `Mod+b`            | 打开/关闭状态栏           |
+| `Mod+Shift+d`      | 更换壁纸                  |
+| `Mod+Shift+a`      | 打开 `flameshot` 进行截图 |
+| `Mod+Ctrl+q`       | 关闭当前窗口              |
+| `Mod+Ctrl+Shift+c` | 关闭 `dwm`                |
+| `Mod+,`            | 暂不了解该快捷键的功能    |
+| `Mod+.`            | 暂不了解该快捷键的功能    |
+| `Mod+Shift+,`      | 暂不了解该快捷键的功能    |
+| `Mod+Shift+.`      | 暂不了解该快捷键的功能    |
 
 ### 2 鼠标点击
 
-**注：这里的 `A` / `B` / `C` / `D` / `E` 详见[这里](#03-状态栏)。**
+**注：这里的 `A` / `B` / `C` / `D` / `E` 详见 [这里](#03-状态栏)。**
 
 #### 2.1 更改窗口布局
 

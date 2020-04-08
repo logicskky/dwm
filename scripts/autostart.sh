@@ -4,7 +4,7 @@ picom &
 /bin/bash ~/Program/dwm/scripts/dwm-status.sh &
 /bin/bash ~/Program/dwm/scripts/tap-to-click.sh &
 /bin/bash ~/Program/dwm/scripts/inverse-scroll.sh &
-variety &
+/bin/bash ~/Program/dwm/scripts/wp-autochange.sh &
 sleep 1
 nm-applet &
 flameshot &

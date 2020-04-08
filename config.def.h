@@ -81,9 +81,12 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
-static const char *upvol[]   = { "~/Program/dwm/scripts/vol-up.sh",      NULL };
-static const char *downvol[] = { "~/Program/dwm/scripts/vol-down.sh",    NULL };
-static const char *mutevol[] = { "~/Program/dwm/scripts/vol-toggle.sh",  NULL };
+static const char *upvolcmd[]       = { "/home/frank/Program/dwm/scripts/vol-up.sh",      NULL };
+static const char *downvolcmd[]     = { "/home/frank/Program/dwm/scripts/vol-down.sh",    NULL };
+static const char *mutevolcmd[]     = { "/home/frank/Program/dwm/scripts/vol-toggle.sh",  NULL };
+
+static const char *wpchangecmd[]    = { "/home/frank/Program/dwm/scripts/wp-change.sh",   NULL };
+static const char *screenshotcmd[]  = { "/home/frank/Program/dwm/scripts/screenshot.sh",  NULL };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "60x20", NULL };
@@ -93,9 +96,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,          spawn,          {.v = dmenucmd }      },
 	{ MODKEY,                       XK_Return,     spawn,          {.v = termcmd }       },
 	{ MODKEY,                       XK_c,          spawn,          {.v = browsercmd }    },
-	{ MODKEY|ControlMask,           XK_i,          spawn,          {.v = upvol }         },
-	{ MODKEY|ControlMask,           XK_k,          spawn,          {.v = downvol }       },
-	{ MODKEY|ControlMask,           XK_m,          spawn,          {.v = mutevol }       },
+	{ MODKEY|ShiftMask,             XK_w,          spawn,          {.v = upvolcmd }      },
+	{ MODKEY|ShiftMask,             XK_s,          spawn,          {.v = downvolcmd }    },
+	{ MODKEY|ShiftMask,             XK_e,          spawn,          {.v = mutevolcmd }    },
+	{ MODKEY|ShiftMask,             XK_d,          spawn,          {.v = wpchangecmd }   },
+	{ MODKEY|ShiftMask,             XK_a,          spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_apostrophe, togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,          togglebar,      {0}                   },
 	{ MODKEY|ShiftMask,             XK_k,          rotatestack,    {.i = +1 }            },
