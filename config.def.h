@@ -81,12 +81,12 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
-static const char *upvolcmd[]       = { "/home/frank/Program/dwm/scripts/vol-up.sh",      NULL };
-static const char *downvolcmd[]     = { "/home/frank/Program/dwm/scripts/vol-down.sh",    NULL };
-static const char *mutevolcmd[]     = { "/home/frank/Program/dwm/scripts/vol-toggle.sh",  NULL };
+static const char *upvolcmd[]       = { "/home/frank/Program/Suckless/dwm/scripts/vol-up.sh",      NULL };
+static const char *downvolcmd[]     = { "/home/frank/Program/Suckless/dwm/scripts/vol-down.sh",    NULL };
+static const char *mutevolcmd[]     = { "/home/frank/Program/Suckless/dwm/scripts/vol-toggle.sh",  NULL };
 
-static const char *wpchangecmd[]    = { "/home/frank/Program/dwm/scripts/wp-change.sh",   NULL };
-static const char *screenshotcmd[]  = { "/home/frank/Program/dwm/scripts/screenshot.sh",  NULL };
+static const char *wpchangecmd[]    = { "/home/frank/Program/Suckless/dwm/scripts/wp-change.sh",   NULL };
+static const char *screenshotcmd[]  = { "/home/frank/Program/Suckless/dwm/scripts/screenshot.sh",  NULL };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "60x20", NULL };
