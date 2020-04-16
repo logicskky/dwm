@@ -7,27 +7,27 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 * [安装前的准备](#安装前的准备)
 * [安装](#安装)
 * [运行](#运行)
-	* [使用 startx 启动 dwm](#使用-startx-启动-dwm)
-	* [使用登录管理器启动 dwm](#使用登录管理器启动-dwm)
+    * [使用 startx 启动 dwm](#使用-startx-启动-dwm)
+    * [使用登录管理器启动 dwm](#使用登录管理器启动-dwm)
 * [配置](#配置)
 * [补丁](#补丁)
 * [使用方法](#使用方法)
-	* [0 前置知识](#0-前置知识)
-		* [0.1 一些键位](#01-一些键位)
-		* [0.2 桌面和标签](#02-桌面和标签)
-		* [0.3 状态栏](#03-状态栏)
-	* [1 键盘快捷键](#1-键盘快捷键)
-		* [1.1 移动焦点](#11-移动焦点)
-		* [1.2 关于桌面和标签](#12-关于桌面和标签)
-		* [1.3 打开软件](#13-打开软件)
-		* [1.4 更改窗口布局](#14-更改窗口布局)
-		* [1.5 关于声音的控制](#15-关于声音的控制)
-		* [1.6 关于窗口之间的缝隙](#16-关于窗口之间的缝隙)
-		* [1.7 其他功能](#17-其他功能)
-	* [2 鼠标点击](#2-鼠标点击)
-		* [2.1 更改窗口布局](#21-更改窗口布局)
-		* [2.2 打开软件](#22-打开软件)
-		* [2.3 关于桌面和标签](#23-关于桌面和标签)
+    * [0 前置知识](#0-前置知识)
+        * [0.1 一些键位](#01-一些键位)
+        * [0.2 桌面和标签](#02-桌面和标签)
+        * [0.3 状态栏](#03-状态栏)
+    * [1 键盘快捷键](#1-键盘快捷键)
+        * [1.1 移动焦点](#11-移动焦点)
+        * [1.2 关于桌面和标签](#12-关于桌面和标签)
+        * [1.3 打开软件](#13-打开软件)
+        * [1.4 更改窗口布局](#14-更改窗口布局)
+        * [1.5 关于声音的控制](#15-关于声音的控制)
+        * [1.6 关于窗口之间的缝隙](#16-关于窗口之间的缝隙)
+        * [1.7 其他功能](#17-其他功能)
+    * [2 鼠标点击](#2-鼠标点击)
+        * [2.1 更改窗口布局](#21-更改窗口布局)
+        * [2.2 打开软件](#22-打开软件)
+        * [2.3 关于桌面和标签](#23-关于桌面和标签)
 
 <!-- vim-markdown-toc -->
 
@@ -39,7 +39,14 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 - 更改 `config.def.h` 或 `config.h` 中的字体设置以符合你的喜好。  
 - 更改 `scripts` 文件夹中的 `autostart.sh` 脚本（即开机启动项），以符合你的要求。  
 - 更改所有文件中的路径以符合你的电脑上的路径。  
-- 我的 dwm 需要我的 [st](https://github.com/LogicSkky/my-st) 和 [dmenu](https://github.com/LogicSkky/my-dmenu)，以及 feh、amixer、flameshot 和 google-chrome。  
+- 我的 dwm 需要的软件：
+    - [我的 st](https://github.com/LogicSkky/my-st)
+    - [我的 dmenu](https://github.com/LogicSkky/my-dmenu)
+    - feh
+    - amixer
+    - flameshot
+    - google-chrome
+    - picom
 ## 安装
 
 - 克隆这个仓库：
@@ -96,20 +103,22 @@ exec dwm
 ## 配置
 
 Dwm 的配置是通过自定义 `config.h` 和重新编译安装来实现的。  
-不过我推荐你自定义 `config.def.h` 这个文件，但要注意，编译安装之前要先删除 `config.h` 这个文件。  
+不过我推荐你自定义 `config.def.h` 这个文件，但要注意，编译安装之前要先删除 `config.h` 这个文件，然后安装完成后，会自动生成 `config.h` 这个文件。  
 
 ## 补丁
 
-- [alphasystray.diff](https://github.com/theniceboy/dwm/blob/master/patches/alphasystray.diff) （[alpha](https://dwm.suckless.org/patches/alpha/) 和 [systray](https://dwm.suckless.org/patches/systray/) 补丁的集合，让状态栏能够半透明并且增加了系统托盘）
-- [dwm-autostart-20161205-bb3bd6f.diff](https://dwm.suckless.org/patches/autostart/) （让 dwm 能在启动时顺便运行一个脚本）
-- [dwm-awesomebar-20191003-80e2a76.diff](https://dwm.suckless.org/patches/awesomebar/) （让状态栏显示当前桌面的所有窗口的名称）
-- [dwm-fullscreen-6.2.diff](https://dwm.suckless.org/patches/fullscreen/) （让窗口可以全屏）
-- [dwm-hide_vacant_tags-6.2.diff](https://dwm.suckless.org/patches/hide_vacant_tags/) （让状态栏只显示有窗口的桌面的标签）
-- [dwm-noborder-6.2.diff](https://dwm.suckless.org/patches/noborder/) （当只有一个窗口时，去除窗口的边框）
-- [dwm-pertag-20170513-ceac8c9.diff](https://dwm.suckless.org/patches/pertag/) （不同的桌面保持不同的窗口管理方式）
-- [dwm-rotatestack-20161021-ab9571b.diff](https://dwm.suckless.org/patches/rotatestack/) （能调整窗口摆放顺序）
-- [dwm-scratchpad-6.2.diff](https://dwm.suckless.org/patches/scratchpad/) （能临时打开一个小窗口并在任意桌面都能显示）
-- [dwm-vanitygaps-20190508-6.2.diff](https://dwm.suckless.org/patches/vanitygaps/) （在窗口之间增加一个小的空隙）
+补丁的具体作用详见 [这里](https://github.com/LogicSkky/my-dwm/tree/master/patches) 。
+
+- [alphasystray.diff](https://github.com/theniceboy/dwm/blob/master/patches/alphasystray.diff)
+- [dwm-autostart-20161205-bb3bd6f.diff](https://dwm.suckless.org/patches/autostart/)
+- [dwm-awesomebar-20191003-80e2a76.diff](https://dwm.suckless.org/patches/awesomebar/)
+- [dwm-fullscreen-6.2.diff](https://dwm.suckless.org/patches/fullscreen/)
+- [dwm-hide_vacant_tags-6.2.diff](https://dwm.suckless.org/patches/hide_vacant_tags/)
+- [dwm-noborder-6.2.diff](https://dwm.suckless.org/patches/noborder/)
+- [dwm-pertag-20170513-ceac8c9.diff](https://dwm.suckless.org/patches/pertag/)
+- [dwm-rotatestack-20161021-ab9571b.diff](https://dwm.suckless.org/patches/rotatestack/)
+- [dwm-scratchpad-6.2.diff](https://dwm.suckless.org/patches/scratchpad/)
+- [dwm-vanitygaps-20190508-6.2.diff](https://dwm.suckless.org/patches/vanitygaps/)
 
 ## 使用方法
 
