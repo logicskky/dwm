@@ -7,8 +7,8 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 * [安装前的准备](#安装前的准备)
 * [安装](#安装)
 * [运行](#运行)
-    * [使用 startx 启动 dwm](#使用-startx-启动-dwm)
     * [使用登录管理器启动 dwm](#使用登录管理器启动-dwm)
+    * [使用 startx 启动 dwm](#使用-startx-启动-dwm)
 * [配置](#配置)
 * [补丁](#补丁)
 * [使用方法](#使用方法)
@@ -70,6 +70,10 @@ make clean install
 
 ## 运行
 
+### 使用登录管理器启动 dwm
+
+把 `others` 文件夹里的 `dwm.desktop` 复制到 `/usr/share/xsessions` 这个文件夹下，之后在登录管理器选择启动 dwm 即可。
+
 ### 使用 startx 启动 dwm
 
 把下面这一行添加到你的 `.xinitrc` 中，以使用 startx 来启动 dwm。  
@@ -95,10 +99,6 @@ do
 done &
 exec dwm
 ```
-
-### 使用登录管理器启动 dwm
-
-把 `others` 文件夹里的 `dwm.desktop` 复制到 `/usr/share/xsessions` 这个文件夹下，之后在登录管理器选择启动 dwm 即可。
 
 ## 配置
 
