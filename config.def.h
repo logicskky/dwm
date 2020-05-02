@@ -81,12 +81,12 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *termcmd[]     = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
-static const char *upvolcmd[]       = { "/home/frank/Program/Software/dwm/scripts/vol-up.sh",      NULL };
-static const char *downvolcmd[]     = { "/home/frank/Program/Software/dwm/scripts/vol-down.sh",    NULL };
-static const char *mutevolcmd[]     = { "/home/frank/Program/Software/dwm/scripts/vol-toggle.sh",  NULL };
+static const char *upvolcmd[]       = { "/home/frank/Programs/Softwares/dwm/scripts/vol-up.sh",      NULL };
+static const char *downvolcmd[]     = { "/home/frank/Programs/Softwares/dwm/scripts/vol-down.sh",    NULL };
+static const char *mutevolcmd[]     = { "/home/frank/Programs/Softwares/dwm/scripts/vol-toggle.sh",  NULL };
 
-static const char *wpchangecmd[]    = { "/home/frank/Program/Software/dwm/scripts/wp-change.sh",   NULL };
-static const char *screenshotcmd[]  = { "/home/frank/Program/Software/dwm/scripts/screenshot.sh",  NULL };
+static const char *wpchangecmd[]    = { "/home/frank/Programs/Softwares/dwm/scripts/wp-change.sh",   NULL };
+static const char *screenshotcmd[]  = { "/home/frank/Programs/Softwares/dwm/scripts/screenshot.sh",  NULL };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "60x20", NULL };
@@ -107,7 +107,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,          rotatestack,    {.i = -1 }            },
 	{ MODKEY,                       XK_j,          focusstack,     {.i = +1 }            },
 	{ MODKEY,                       XK_k,          focusstack,     {.i = -1 }            },
-	{ MODKEY,                       XK_h,          incnmaster,     {.i = +1 }            },
+	{ MODKEY,                       XK_o,          incnmaster,     {.i = +1 }            },
 	{ MODKEY,                       XK_p,          incnmaster,     {.i = -1 }            },
 	{ MODKEY,                       XK_h,          setmfact,       {.f = -0.05}          },
 	{ MODKEY,                       XK_l,          setmfact,       {.f = +0.05}          },

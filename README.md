@@ -38,7 +38,7 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 - 你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。  
 - 更改 `config.def.h` 或 `config.h` 中的设置以符合你的喜好。  
 - 更改 `scripts` 文件夹中的 `autostart.sh` 脚本（即开机启动项），以符合你的要求。  
-- 更改所有文件中的路径以符合你的电脑上的路径（默认的安装路径为 `~/Program/Software/dwm` 目录下，默认的壁纸路径为 `~/Pictures/Wallpapers` 路径下）。  
+- 更改所有文件中的路径以符合你的电脑上的路径（默认的安装路径为 `~/Programs/Softwares/dwm` 目录下，默认的壁纸路径为 `~/Pictures/Wallpapers` 路径下）。  
 - 我的 dwm 需要的软件：
     - [我的 st](https://github.com/LogicSkky/my-st)
     - [我的 dmenu](https://github.com/LogicSkky/my-dmenu)
@@ -49,12 +49,12 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
     - picom
 ## 安装
 
-（以安装在 `~/Program/Software/dwm` 路径为例）
+（以安装在 `~/Programs/Softwares/dwm` 路径为例）
 
 - 进入相应的目录：
 
 ```
-cd ~/Program/Software
+cd ~/Programs/Softwares
 ```
 
 - 克隆这个仓库：
@@ -229,7 +229,7 @@ xsetroot -name "Hello"
 | `Mod+Shift+Space`  | 将当前窗口切换到浮动模式/平铺模式          |
 | `Mod+Shift+k`      | 将窗口往上（左）移动                       |
 | `Mod+Shift+j`      | 将窗口往下（右）移动                       |
-| `Mod+h`            | 将窗口横向分割                             |
+| `Mod+o`            | 将窗口横向分割                             |
 | `Mod+p`            | 将窗口纵向分割                             |
 | `Mod+h`            | 将窗口的纵向分割线左移                     |
 | `Mod+l`            | 将窗口的纵向分割线右移                     |
