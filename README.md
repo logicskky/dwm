@@ -36,9 +36,9 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
 - 你需要有 `Xlib` 头文件。  
 - 你最好拥有 `picom` 或其他窗口渲染器，并在 `scripts` 文件夹中的 `autostart.sh` 脚本中启动它。  
 - 你最好拥有 [Nerd-Fonts](https://github.com/ryanoasis/nerd-fonts) 字体，因为状态栏的脚本需要用到这些字体。  
-- 更改 `config.def.h` 或 `config.h` 中的字体设置以符合你的喜好。  
+- 更改 `config.def.h` 或 `config.h` 中的设置以符合你的喜好。  
 - 更改 `scripts` 文件夹中的 `autostart.sh` 脚本（即开机启动项），以符合你的要求。  
-- 更改所有文件中的路径以符合你的电脑上的路径。  
+- 更改所有文件中的路径以符合你的电脑上的路径（默认的安装路径为 `~/Program/Software/dwm` 目录下，默认的壁纸路径为 `~/Pictures/Wallpapers` 路径下）。  
 - 我的 dwm 需要的软件：
     - [我的 st](https://github.com/LogicSkky/my-st)
     - [我的 dmenu](https://github.com/LogicSkky/my-dmenu)
@@ -49,16 +49,24 @@ dwm 是 X 服务的一个非常轻量的、快速的动态窗口管理器。
     - picom
 ## 安装
 
+（以安装在 `~/Program/Software/dwm` 路径为例）
+
+- 进入相应的目录：
+
+```
+cd ~/Program/Software
+```
+
 - 克隆这个仓库：
 
 ```
-git clone https://github.com/LogicSkky/my-dwm
+git clone https://github.com/logicskky/dwm.git
 ```
 
 - 进入这个文件夹：
 
 ```
-cd my-dwm
+cd dwm
 ```
 
 - 编辑 `config.mk` 这个文件来匹配你的本地设置（dwm 默认安装到 `/usr/local` 命名空间下）。  
@@ -107,7 +115,7 @@ Dwm 的配置是通过自定义 `config.h` 和重新编译安装来实现的。
 
 ## 补丁
 
-补丁的具体作用详见 [这里](https://github.com/LogicSkky/my-dwm/tree/master/patches) 。
+这些补丁的具体作用详见 [这里](https://github.com/LogicSkky/my-dwm/tree/master/patches) 。
 
 - [alphasystray.diff](https://github.com/theniceboy/dwm/blob/master/patches/alphasystray.diff)
 - [dwm-autostart-20161205-bb3bd6f.diff](https://dwm.suckless.org/patches/autostart/)
@@ -186,8 +194,8 @@ xsetroot -name "Hello"
 
 | 快捷键  | 作用               |
 |---------|--------------------|
-| `Mod+i` | 往上（左）移动焦点 |
-| `Mod+k` | 往下（右）移动焦点 |
+| `Mod+k` | 往上（左）移动焦点 |
+| `Mod+j` | 往下（右）移动焦点 |
 
 #### 1.2 关于桌面和标签
 
@@ -219,11 +227,11 @@ xsetroot -name "Hello"
 | `Mod+f`            | 进入进入全屏模式                           |
 | `Mod+Space`        | 切换到上一种窗口摆放方式                   |
 | `Mod+Shift+Space`  | 将当前窗口切换到浮动模式/平铺模式          |
-| `Mod+Shift+i`      | 将窗口往上（左）移动                       |
-| `Mod+Shift+k`      | 将窗口往下（右）移动                       |
+| `Mod+Shift+k`      | 将窗口往上（左）移动                       |
+| `Mod+Shift+j`      | 将窗口往下（右）移动                       |
 | `Mod+h`            | 将窗口横向分割                             |
 | `Mod+p`            | 将窗口纵向分割                             |
-| `Mod+j`            | 将窗口的纵向分割线左移                     |
+| `Mod+h`            | 将窗口的纵向分割线左移                     |
 | `Mod+l`            | 将窗口的纵向分割线右移                     |
 | `Mod+Shift+Return` | 将当前窗口变成主窗口，或者放到栈区域的顶部 |
 
@@ -242,20 +250,20 @@ xsetroot -name "Hello"
 |-------------------|------------------------------------------|
 | `Mod+Alt+0`       | 打开/关闭 `1` 和 `2` 的缝隙              |
 | `Mod+Alt+Shift+0` | 把 `1` 和 `2` 之间的缝隙切换到默认的大小 |
-| `Mod+Alt+j`       | 放大 `1` 和 `2` 的缝隙                   |
+| `Mod+Alt+h`       | 放大 `1` 和 `2` 的缝隙                   |
 | `Mod+Alt+l`       | 缩小 `1` 和 `2` 的缝隙                   |
-| `Mod+Alt+Shift+j` | 放大 `2` 的缝隙                          |
+| `Mod+Alt+Shift+h` | 放大 `2` 的缝隙                          |
 | `Mod+Alt+Shift+l` | 缩小 `2` 的缝隙                          |
-| `Mod+Alt+Ctrl+j`  | 放大 `1` 的缝隙                          |
+| `Mod+Alt+Ctrl+h`  | 放大 `1` 的缝隙                          |
 | `Mod+Alt+Ctrl+l`  | 缩小 `1` 的缝隙                          |
 | `Mod+u`           | 放大 `1` 的横向的窗口分割缝隙            |
-| `Mod+o`           | 缩小 `1` 的横向的窗口分割缝隙            |
+| `Mod+i`           | 缩小 `1` 的横向的窗口分割缝隙            |
 | `Mod+Ctrl+u`      | 放大 `1` 的纵向的窗口分割缝隙            |
-| `Mod+Ctrl+o`      | 缩小 `1` 的纵向的窗口分割缝隙            |
+| `Mod+Ctrl+i`      | 缩小 `1` 的纵向的窗口分割缝隙            |
 | `Mod+Alt+u`       | 放大 `2` 的横向的缝隙                    |
-| `Mod+Alt+o`       | 缩小 `2` 的横向的缝隙                    |
+| `Mod+Alt+i`       | 缩小 `2` 的横向的缝隙                    |
 | `Mod+Shift+u`     | 放大 `2` 的纵向的缝隙                    |
-| `Mod+Shift+o`     | 缩小 `2` 的纵向的缝隙                    |
+| `Mod+Shift+i`     | 缩小 `2` 的纵向的缝隙                    |
 
 #### 1.7 其他功能
 
@@ -274,7 +282,7 @@ xsetroot -name "Hello"
 
 ### 2 鼠标点击
 
-**注：这里的 `A` / `B` / `C` / `D` / `E` 详见 [这里](#03-状态栏)。**
+**注：这里的 `A` / `B` / `C` / `D` / `E` 所代表的部分详见 [这里](#03-状态栏)。**
 
 #### 2.1 更改窗口布局
 
