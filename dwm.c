@@ -1752,7 +1752,7 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd /home/frank/Program/Software/dwm/scripts; ./autostart.sh &");
+	system("cd /home/frank/Programs/Softwares/dwm/scripts; ./autostart.sh &");
 }
 
 void
