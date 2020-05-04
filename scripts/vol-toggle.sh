@@ -1,4 +1,4 @@
 #!/bin/bash
 
 /usr/bin/amixer set Master toggle
-bash ~/Program/Software/dwm/scripts/dwm-status-refresh.sh
+bash ~/Programs/Softwares/dwm/scripts/dwm-status-refresh.sh
